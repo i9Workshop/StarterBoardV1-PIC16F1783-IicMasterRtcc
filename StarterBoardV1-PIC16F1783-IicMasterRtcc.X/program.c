@@ -1,9 +1,6 @@
 #include "program.h"
 
 
-uint8_t RxData = 0; // Variable for UART module receive register, RXREG
-
-
 // Delay x1.5us
 void delay_x1o5us(uint8_t delay) {
     for(uint8_t i=0; i<delay; i++) NOP();
