@@ -398,9 +398,9 @@ void lcd_PrintDigitInt32(int32_t number, uint8_t noDigit, bool enSign, bool enZe
 }
 
 void i2c_Initialize(uint32_t fosc, uint16_t baudrate) {
-    SSPCON1bits.SSPM = 8; // Set MSSP module for I2C master mode with clock = FOSC/(4*(SSPADD+1)) - Page 306
-    
     SSPSTATbits.SMP = 1; // Set disabled slew rate control for standard speed mode - Page 304
+    
+    SSPCON1bits.SSPM = 8; // Set MSSP module for I2C master mode with clock = FOSC/(4*(SSPADD+1)) - Page 306
     
     SSPCON3bits.SDAHT = 0; // Set 100ns for minimum SDA hold time - Page 308
     
